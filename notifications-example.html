@@ -1,0 +1,33 @@
+<head>
+  <title>trail-example</title>
+</head>
+
+<body>
+	{{> message}}
+</body>
+
+<template name="message">
+	{{> notifications}}
+	<h2>Example for Meteorite packages</h2>
+	<h1><a href="http://beta.atmospherejs.com/package/notifications">Notifications</h1>
+	<p>Project source can be found in <a href="https://github.com/gfk-ba/meteor-notifications">this GitHub project</a>.</p>
+    {{> generate}}
+</template>
+
+
+<template name="generate">
+	<input class="js-title" type="text" value="My notification title" />
+	<input class="js-msg" type="text" value="My notification message" /><br/>
+	Disappear after x ms (0 is forever)<input class="js-timeout" type="text" value="0" /><br/>
+    usercloseable: <input class="js-closeable" type="checkbox" checked/>
+
+
+
+   <select class="js-level">
+       {{#each types}}
+			 <option value="{{value}}">{{name}}</option>
+       {{/each}}
+	</select>
+    <br/>
+	<input class="js-btn-client" type="button" value="Show notification" />
+</template>

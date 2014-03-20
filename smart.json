@@ -1,0 +1,7 @@
+{
+  "packages": {
+    "notifications": {
+      "path": "../meteor-notifications"
+    }
+  }
+}
