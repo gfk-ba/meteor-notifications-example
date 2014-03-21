@@ -1,1 +1,85 @@
 /* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+
+body {
+	color: black;
+	font-family: arial;
+	margin: 0;
+}
+
+#header {
+	background-color: #D7D6C4;
+	font-family: 'Josefin Slab', serif;
+	padding: 30px 20px;
+}
+
+#header h1 {
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	margin: 0;
+}
+
+#header h2 {
+	margin: 0px 0px 20px 0px;
+	font-size: 26px;
+	color: #767450;
+}
+
+#content {
+	margin-top: 10px;
+	padding: 20px;
+}
+
+#header ul {
+	margin: 0;
+	padding: 0;
+	height: 20px;
+}
+
+#header ul li {
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+
+#header ul li a, #header ul li a:hover, #header ul li a:visited {
+	color: black;
+}
+
+input {
+	border: 1px solid #767450;
+	border-radius: 4px;
+	padding: 7px;
+}
+
+label {
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 5px 0;
+    text-align: right;
+    width: 250px;
+}
+
+.button {
+	border-radius: 3px;
+	background-color: #FF6600;
+	color: white;
+	padding: 5px 40px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	margin-left: 270px;
+}
+
+.row {
+	padding: 10px 0;
+}
+
+.row:last-child {
+	margin-top: 20px;
+}
