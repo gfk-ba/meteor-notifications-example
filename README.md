@@ -7,6 +7,8 @@ This example is deployed at [meteor.com](http://notifications-example.meteor.com
 
 You can run the example locally using:
 ``` sh
+git clone git@github.com:gfk-ba/meteor-notifications-example.git
+cd meteor-notifications-example
 mrt install
 meteor
 ```
