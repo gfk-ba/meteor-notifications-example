@@ -1,7 +1,7 @@
 notifications-example
 -------------
 
-Very simple example application demonstrating [notifications](http://beta.atmospherejs.com/package/notifications).
+Very simple example application demonstrating [notifications](http://atmospherejs.com/package/notifications).
 
 This example is deployed at [meteor.com](http://notifications-example.meteor.com)
 
