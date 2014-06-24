@@ -7,8 +7,8 @@
     "packages": {
       "notifications": {
         "git": "https://github.com/gfk-ba/meteor-notifications.git",
-        "tag": "v0.4.7",
-        "commit": "7aec8de53bfea789b99642bae1435de0ab31b17e"
+        "tag": "v0.5.0",
+        "commit": "fe46a1b4620dad35de956a55c47ba88c3a2145f5"
       }
     }
   }
