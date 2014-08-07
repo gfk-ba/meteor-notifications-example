@@ -1,3 +1,5 @@
+End-to-end tests: [![Build Status](https://secure.travis-ci.org/gfk-ba/meteor-notifications-example.png)](http://travis-ci.org/gfk-ba/meteor-notifications-example)
+
 notifications-example
 -------------
 
