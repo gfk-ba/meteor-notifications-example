@@ -46,7 +46,7 @@ module.exports = {
 				.click('.js-btn-client.button')
 				.assert.elementPresent('.notification')
 				.pause(1000)
-				.assert.elementPresent('.notification')
+				.assert.elementNotPresent('.notification')
 				.end();
 	}
 };
