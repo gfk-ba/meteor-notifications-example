@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.10'
+branches:
+  only:
+  - master
+env:
+  global:
+  - secure: L+qnx1p4tFnY8YBoKh5obNuDjHVWTwuy5tC7Z0fQZ8eV5TDGgvfIIMyJPECTH7BphZ0ujvhw4nl1qLArHSfMaVWdsStVnzIC+A8zoVO5cpxYFhgQQJ4vOlgdx1N8+6tZGHhT66L6t5CvPx4+5PH69y2T1BQKO2yWkxEK5T4NqIw=
+  - secure: g+p2ByWLS9k7va0qcP+HTHELF4d28zA6dlgmNpVp8RBTbIVVx9BOQ37L8LR8SMcxe8MT/M7Ip0yomycAV2wIQsYHzwlFFVYxN6ACdJ9nVSGdwfhTVEbkzBuNJnkAiP0JZF7Qargsxhn/07ZeVZBNBt5TdovU3v+ShNqbD2FQ9aY=
+script: "./run_nightwatch.sh"

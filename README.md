@@ -12,4 +12,3 @@ cd meteor-notifications-example
 mrt install
 meteor
 ```
-
