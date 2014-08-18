@@ -1,7 +1,5 @@
 {
   "packages": {
-    "notifications": {
-    },
 	"velocity": {},
 	"selenium-nightwatch": {}
   }
