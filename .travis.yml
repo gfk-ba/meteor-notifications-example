@@ -4,8 +4,6 @@ node_js:
 before_install:
 - sudo apt-get install expect
 - curl https://install.meteor.com | /bin/sh
-- npm install -g meteorite
-- mrt update
 branches:
   only:
   - master

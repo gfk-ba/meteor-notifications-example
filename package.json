@@ -1,0 +1,7 @@
+{
+	"name": "notificationsTests",
+	"version": "0.1.0",
+	"dependencies": {
+		"nightwatch": "0.5.22"
+	}
+}
