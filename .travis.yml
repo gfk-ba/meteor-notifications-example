@@ -1,12 +1,20 @@
 language: node_js
 node_js:
 - '0.10'
+before_install:
+- sudo apt-get install expect
+- curl https://install.meteor.com | /bin/sh
+- npm install -g meteorite
+- mrt update
 branches:
   only:
   - master
 env:
   global:
+  - METEOR_DEPLOY_URL=notifications-example.meteor.com
   - secure: L+qnx1p4tFnY8YBoKh5obNuDjHVWTwuy5tC7Z0fQZ8eV5TDGgvfIIMyJPECTH7BphZ0ujvhw4nl1qLArHSfMaVWdsStVnzIC+A8zoVO5cpxYFhgQQJ4vOlgdx1N8+6tZGHhT66L6t5CvPx4+5PH69y2T1BQKO2yWkxEK5T4NqIw=
   - secure: g+p2ByWLS9k7va0qcP+HTHELF4d28zA6dlgmNpVp8RBTbIVVx9BOQ37L8LR8SMcxe8MT/M7Ip0yomycAV2wIQsYHzwlFFVYxN6ACdJ9nVSGdwfhTVEbkzBuNJnkAiP0JZF7Qargsxhn/07ZeVZBNBt5TdovU3v+ShNqbD2FQ9aY=
   - secure: sJNDnwVE5u94DDAJ5DIb8Gn+VcGKlFuTstZjzFabmmsHgfokv5c+Tv3zwUDuc/vdNhek7Cuak1gL6BBqLkobcIC636wnGNSpYByb8oRFIVkYrbHBz/NtW2crmmZ9YGrUQAwCQ9LUNiZsVyxJGZbyj+0BbrZPVf0gaqRbcjY0hLM=
-script: ./run_nightwatch.sh
+  - secure: QRXmuj56DRGkCaC52gnPDDYnYwzQDZ/0CWOTRxmEoqtsAS0hYQYcJEDryqoElm88+vl1Mn0Kt2fhe77qQ5gN8VQkIIYJgARhK5o75YeV6WKdT+5z5Jb4doioqDYivPAwgLjkFWX2KxEXWxIm+6urdK46gMXyAOOFjB503GgB35E=
+  - secure: QGna289UQPgm0n8QOUBH0wM26BpT8VtiqbHHox9QIQjW/WlzOgqzlSEgOjvtXnpXycrxHLYPcF1HAyQvIewqs5gKXnEb/ex0txGrBbwExWeEJ5pFD8H6E73/1kRYs081IDsNM9S1XQ3lzlSYH8MenTuh0BpbY6lDv3d8VBTvb5U=
+script: "./run_nightwatch.sh"
