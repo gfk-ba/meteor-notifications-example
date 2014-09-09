@@ -4,6 +4,7 @@ node_js:
 before_install:
 - sudo apt-get install expect
 - curl https://install.meteor.com | /bin/sh
+- meteor update
 branches:
   only:
   - master
