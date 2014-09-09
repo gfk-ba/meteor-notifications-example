@@ -8,8 +8,8 @@
     "packages": {
       "velocity": {
         "git": "https://github.com/xolvio/velocity.git",
-        "tag": "v0.1.18",
-        "commit": "1958c117417e832c3e9025088cca845b4a82728f"
+        "tag": "v0.1.19",
+        "commit": "5ccde8b9a72d8291f22fea9393821142d19a6d0a"
       },
       "selenium-nightwatch": {
         "git": "https://github.com/awatson1978/selenium-nightwatch.git",
