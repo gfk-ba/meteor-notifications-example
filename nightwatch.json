@@ -78,8 +78,8 @@
 			"selenium_port" : 80,
 			"silent" : true,
 			"desiredCapabilities": {
-				"name" : "Browserstack-firefox",
-				"browserName": "firefox",
+				"name" : "Notifications-system-tests",
+				"browserName": "chrome",
 				"javascriptEnabled": true,
 				"browserstack.user": "${BROWSERSTACK_USERNAME}",
 				"browserstack.key": "${BROWSERSTACK_KEY}"

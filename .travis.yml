@@ -16,4 +16,6 @@ env:
   - secure: qoMcH/wRdlCfMogIxQwwIa2NVg4KHgH5s6tCrbIkg7yzcygxZ0E9s1DVAjYDKp3wkV021zjrQA1MODICFeMrUoE1PWwPiPKhUTj50o8uqF8DyEvlhFo/LrC+2avRmXxtuvNKue71eOrbScchcQdHniDKhfSV15EcKaTJAXEQqnE=
   - secure: XFnTkyVQKfMR/nzQLJw7xr795UlQ/hBAO5GZXkufv1DXcNGI8T8j4Fa9u6TEfxkgD4B4S72tfLgG1ku7OfmMgI174k2ukLc4fVIHCYXVm52dQ7c8el+TwZMBa+RsNWEjDr+GAMljCJP4Wp9a71FSk5exA3LAhjSG8m56LgnPGzA=
   - secure: hOmJobNW7oafw2kV1AtO//4HDlLRThDjV6gIqMvtGY0+hT+ZTb4ZhAULrCg+CkodGzKNy5nVfStn0dGZurGFwS9VKDybZVpb7ECsYmH0WuvZwUJ8fhJLcWKFTTV2aXWwdNTFWXaKydllLbr0gYSYLN+oSkFFbxTjGPL0rh363Hs=
-script: "./deployAndTest.sh -e browserstack"
+script:
+  - "expect deploy.exp"
+  - "./run_nightwatch.sh -e browserstack"
