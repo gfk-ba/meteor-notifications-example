@@ -18,4 +18,5 @@ env:
   - secure: hOmJobNW7oafw2kV1AtO//4HDlLRThDjV6gIqMvtGY0+hT+ZTb4ZhAULrCg+CkodGzKNy5nVfStn0dGZurGFwS9VKDybZVpb7ECsYmH0WuvZwUJ8fhJLcWKFTTV2aXWwdNTFWXaKydllLbr0gYSYLN+oSkFFbxTjGPL0rh363Hs=
 script:
   - "expect deploy.exp"
+  - "sleep 5" #Sleep is to make sure meteor is done deploying
   - "./run_nightwatch.sh -e browserstack"
