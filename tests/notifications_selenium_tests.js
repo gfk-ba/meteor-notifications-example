@@ -1,9 +1,7 @@
-var URL = 'http://notifications-example.meteor.com';
-
 module.exports = {
 	"Check vanilla notification" : function (client) {
 		client
-				.url(URL)
+				.url(client.launch_url)
 				.setValue('.js-title', ['nightwatch', client.Keys.ENTER])
 				.setValue('.js-msg', ['testMessage', client.Keys.ENTER])
 				.click('.js-btn-client.button')
@@ -16,7 +14,7 @@ module.exports = {
 	},
 	"Check not user-closeable actually not closeable" : function (client) {
 		client
-				.url(URL)
+				.url(client.launch_url)
 				.assert.elementNotPresent('.notification')
 				.click('.js-closeable')
 				.click('.js-btn-client.button')
@@ -28,7 +26,7 @@ module.exports = {
 	},
 	"User-closeable Notification with timeout gets removed after timeout" : function (client) {
 		client
-				.url(URL)
+				.url(client.launch_url)
 				.assert.elementNotPresent('.notification')
 				.setValue('.js-timeout', '500')
 				.click('.js-btn-client.button')
@@ -39,7 +37,7 @@ module.exports = {
 	},
 	"NOT User-closeable Notification with timeout gets removed after timeout" : function (client) {
 		client
-				.url(URL)
+				.url(client.launch_url)
 				.assert.elementNotPresent('.notification')
 				.setValue('.js-timeout', '500')
 				.click('.js-closeable')

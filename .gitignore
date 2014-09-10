@@ -1,3 +1,4 @@
 packages/
 /tests-output/
 /node_modules/
+/selenium-debug.log

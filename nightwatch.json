@@ -1,37 +1,89 @@
 {
-  "src_folders" : ["tests"],
-  "output_folder" : "tests-output",
-  "custom_commands_path" : "",
-  "custom_assertions_path" : "",
-  "globals_path" : "globals.json",
+	"src_folders" : ["./tests"],
+	"output_folder" : "./tests-output",
+	"custom_commands_path" : "./custom-commands",
+	"custom_assertions_path" : "",
+	"globals_path" : "globals.json",
+	"live_output" : false,
 
-  "selenium" : {
-    "start_process" : false,
-    "host" : "hub.browserstack.com",
-    "port" : 80
-  },
+	"selenium" : {
+		"start_process" : true,
+		"server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.40.0.jar",
+		"log_path" : "",
+		"host" : "127.0.0.1",
+		"port" : 4444,
+		"cli_args" : {
+			"webdriver.chrome.driver" : "",
+			"webdriver.ie.driver" : "",
+			"webdriver.firefox.profile" : ""
+		}
+	},
 
-  "test_settings" : {
-    "default" : {
-      "launch_url" : "http://localhost",
-	  "selenium_host" : "hub.browserstack.com",
-	  "selenium_port" : 80,
-      "pathname": "/wd/hub",
-      "silent" : true,
-      "disable_colors": false,
-      "firefox_profile" : false,
-      "ie_driver" : "",
-      "screenshots" : {
-        "enabled" : false,
-        "path" : ""
-      },
-      "desiredCapabilities" : {
-        "browserName" : "firefox",
-        "javascriptEnabled" : true,
-        "acceptSslCerts" : true,
-		  "browserstack.user": "#USERNAME#",
-		  "browserstack.key": "#KEY#"
-      }
-    }
-  }
+	"test_settings" : {
+		"default" : {
+			"launch_url" : "http://localhost:3000",
+			"selenium_host" : "127.0.0.1",
+			"selenium_port" : 4444,
+			"silent" : true,
+			"disable_colors": false,
+			"screenshots" : {
+				"enabled" : false,
+				"path" : ""
+			},
+			"desiredCapabilities" : {
+				"browserName" : "firefox",
+				"javascriptEnabled" : true,
+				"acceptSslCerts" : true
+			}
+		},
+
+		"saucelabs" : {
+			"selenium_host" : "ondemand.saucelabs.com",
+			"selenium_port" : 80,
+			"username" : "${SAUCE_USERNAME}",
+			"access_key" : "${SAUCE_ACCESS_KEY}",
+			"use_ssl" : false,
+			"silent" : true,
+			"output" : true,
+			"screenshots" : {
+				"enabled" : false,
+				"path" : ""
+			},
+			"desiredCapabilities": {
+				"name" : "test-example",
+				"browserName": "firefox"
+			},
+			"globals" : {
+				"myGlobal" : "some_sauce_global"
+			},
+			"selenium" : {
+				"start_process" : false
+			}
+		},
+
+		"phantomjs" : {
+			"desiredCapabilities" : {
+				"browserName" : "phantomjs",
+				"javascriptEnabled" : true,
+				"acceptSslCerts" : true
+			}
+		},
+
+		"browserstack" : {
+			"launch_url": "http://${METEOR_DEPLOY_URL}",
+			"selenium" : {
+				"start_process" : false
+			},
+			"selenium_host" : "hub.browserstack.com",
+			"selenium_port" : 80,
+			"silent" : true,
+			"desiredCapabilities": {
+				"name" : "Browserstack-firefox",
+				"browserName": "firefox",
+				"javascriptEnabled": true,
+				"browserstack.user": "${BROWSERSTACK_USERNAME}",
+				"browserstack.key": "${BROWSERSTACK_KEY}"
+			}
+		}
+	}
 }

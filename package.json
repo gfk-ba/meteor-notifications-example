@@ -1,7 +1,9 @@
 {
-	"name": "notificationsTests",
-	"version": "0.1.0",
-	"dependencies": {
-		"nightwatch": "0.5.22"
-	}
+  "name": "notificationsTests",
+  "version": "0.1.0",
+  "dependencies": {
+    "nightwatch": "0.5.22",
+    "phantomjs": "^1.9.7-15",
+    "selenium-server-standalone-jar": "^2.40.0"
+  }
 }
