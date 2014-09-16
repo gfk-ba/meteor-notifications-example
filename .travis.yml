@@ -19,4 +19,4 @@ env:
 script:
   - "expect deploy.exp"
   - "sleep 5" #Sleep is to make sure meteor is done deploying
-  - "./run_nightwatch.sh -e phantomjs"
+  - "./run_nightwatch.sh -e browserstack"
