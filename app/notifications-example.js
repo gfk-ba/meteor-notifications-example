@@ -6,13 +6,14 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.generate.types = function () {
+    Template.generate.helpers({
+        types: function () {
         var returnValue = [];
 
         _.each(Notifications.TYPES, function (i, k) {
            returnValue.push({name:k, value: i});
         });
         return returnValue;
-    };
+    }
+    });
 }
-
