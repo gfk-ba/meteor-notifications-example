@@ -1,3 +1,4 @@
+var waitTime = 2000;
 module.exports = {
 	"Check vanilla notification" : function (client) {
 		client
@@ -8,8 +9,7 @@ module.exports = {
 				.assert.containsText('.notification .title', 'nightwatch')
 				.assert.containsText('.notification .message', 'testMessage')
 				.click('.notification')
-				.pause(500)
-				.assert.elementNotPresent('.notification')
+				.waitForElementNotPresent('.notification', waitTime)
 				.end();
 	},
 	"Check not user-closeable actually not closeable" : function (client) {
@@ -31,8 +31,7 @@ module.exports = {
 				.setValue('.js-timeout', '500')
 				.click('.js-btn-client.button')
 				.assert.elementPresent('.notification')
-				.pause(1000)
-				.assert.elementNotPresent('.notification')
+				.waitForElementNotPresent('.notification', waitTime)
 				.end();
 	},
 	"NOT User-closeable Notification with timeout gets removed after timeout" : function (client) {
@@ -43,8 +42,7 @@ module.exports = {
 				.click('.js-closeable')
 				.click('.js-btn-client.button')
 				.assert.elementPresent('.notification')
-				.pause(1000)
-				.assert.elementNotPresent('.notification')
+				.waitForElementNotPresent('.notification', waitTime)
 				.end();
 	}
 };
