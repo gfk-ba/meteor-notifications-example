@@ -1,4 +1,4 @@
-var waitTime = 2000;
+var waitTime = 5000;
 module.exports = {
 	"Check vanilla notification" : function (client) {
 		client
@@ -60,6 +60,19 @@ module.exports = {
 				.click('.notification')
 				.waitForElementNotPresent('.notification', waitTime)
 				.assert.containsText('div#header > h1', 'Test Success!')
+				.end();
+	},
+	"Should use defaultOptions by type when available": function (client) {
+		client
+				.url(client.launch_url)
+				.assert.elementNotPresent('.notification')
+				.execute(function () {
+					Notifications.defaultOptionsByType[2] = {timeout: 1000};
+					Notifications.warn('foo', 'bar');
+				})
+				.waitForElementPresent('.notification', waitTime)
+				.assert.cssClassPresent('.notification', 'warning')
+				.waitForElementNotPresent('.notification', waitTime)
 				.end();
 	}
 };
