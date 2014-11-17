@@ -36,7 +36,14 @@
 				"acceptSslCerts" : true
 			}
 		},
-
+		"firefoxDev": {
+			"launch_url": "http://localhost:3000",
+			"desiredCapabilities" : {
+				"browserName" : "firefox",
+				"javascriptEnabled" : true,
+				"acceptSslCerts" : true
+			}
+		},
 		"saucelabs" : {
 			"selenium_host" : "ondemand.saucelabs.com",
 			"selenium_port" : 80,
