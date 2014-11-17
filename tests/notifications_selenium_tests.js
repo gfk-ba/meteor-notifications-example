@@ -44,5 +44,22 @@ module.exports = {
 				.assert.elementPresent('.notification')
 				.waitForElementNotPresent('.notification', waitTime)
 				.end();
+	},
+	"Should call closed function when notification is closed": function (client) {
+		client
+				.url(client.launch_url)
+				.assert.elementNotPresent('.notification');
+
+		//We manually add a notification with a closed handler
+		client.execute(function () {
+			Notifications.error('test','test123', {closed: function () {  $('div#header > h1').text('Test Success!'); ;}});
+		});
+
+		client
+				.waitForElementPresent('.notification', waitTime)
+				.click('.notification')
+				.waitForElementNotPresent('.notification', waitTime)
+				.assert.containsText('div#header > h1', 'Test Success!')
+				.end();
 	}
 };
